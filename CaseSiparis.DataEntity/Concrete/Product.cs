@@ -14,5 +14,6 @@ namespace CaseSiparis.DataEntity
         public string ProductName { get; set; }
         public int ProductCount { get; set; }
         public decimal ProductAmount { get; set; }
+        public int CompanyId { get; set; }
     }
 }

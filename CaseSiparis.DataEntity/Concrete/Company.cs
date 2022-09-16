@@ -12,5 +12,6 @@ namespace CaseSiparis.DataEntity.Concrete
         [Key]
         public int CompanyID { get; set; }
         public string CompanyName { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
