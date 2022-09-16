@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaseSİparis.DataAccesLayer.Concrete
+namespace CaseSiparis.DataAccesLayer.Concrete
 {
     public class Context: DbContext
     {

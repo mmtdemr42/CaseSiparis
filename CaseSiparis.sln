@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseSiparis", "CaseSiparis\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseSiparis.DataEntity", "CaseSiparis.DataEntity\CaseSiparis.DataEntity.csproj", "{92C43297-1110-4944-9461-51F6F96C2D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseSİparis.DataAccesLayer", "CaseSİparis.DataAccesLayer\CaseSİparis.DataAccesLayer.csproj", "{DEBF289B-261B-4CAB-97F0-0B3E572E0483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseSiparis.DataAccesLayer", "CaseSİparis.DataAccesLayer\CaseSiparis.DataAccesLayer.csproj", "{DEBF289B-261B-4CAB-97F0-0B3E572E0483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

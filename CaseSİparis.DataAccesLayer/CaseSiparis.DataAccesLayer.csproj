@@ -51,9 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICompanyDal.cs" />
+    <Compile Include="Abstract\IOrderDal.cs" />
+    <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repository\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfCompanyDal.cs" />
+    <Compile Include="EntityFramework\EfOrderDal.cs" />
+    <Compile Include="EntityFramework\EfProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

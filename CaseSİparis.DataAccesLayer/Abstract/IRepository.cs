@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaseSİparis.DataAccesLayer.Abstract
+namespace CaseSiparis.DataAccesLayer.Abstract
 {
     public interface IRepository<TEntity>
     {
