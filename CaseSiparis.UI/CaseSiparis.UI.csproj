@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CaseSiparis.BusinessLayer\CaseSiparis.BusinessLayer.csproj" />
+  </ItemGroup>
+
 </Project>

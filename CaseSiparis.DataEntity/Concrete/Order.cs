@@ -13,7 +13,5 @@ namespace CaseSiparis.DataEntity
         public int OrderID { get; set; }
         public DateTime OrderDate { get; set; }
         public int CompanyID { get; set; }
-        public List<Product> Products { get; set; }
-
     }
 }

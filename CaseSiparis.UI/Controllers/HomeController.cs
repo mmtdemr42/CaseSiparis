@@ -1,4 +1,6 @@
-﻿using CaseSiparis.UI.Models;
+﻿using CaseSiparis.BusinessLayer.Concrete;
+using CaseSiparis.DataAccesLayer.EntityFramework;
+using CaseSiparis.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,6 +13,7 @@ namespace CaseSiparis.UI.Controllers
 {
     public class HomeController : Controller
     {
+        ProductManager productManager = new ProductManager(new EfProductDal());
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -20,7 +23,8 @@ namespace CaseSiparis.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var list = productManager.List();
+            return View(list);
         }
 
         public IActionResult Privacy()
