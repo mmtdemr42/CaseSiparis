@@ -12,6 +12,9 @@ namespace CaseSiparis.DataEntity
         [Key]
         public int OrderID { get; set; }
         public DateTime OrderDate { get; set; }
-        public int CompanyId { get; set; }
+        public int OrderCompanyId { get; set; }
+        public int ProductId { get; set; }
+        public int OrderProductCount { get; set; }
+        public decimal OrderProductAmount { get; set; }
     }
 }

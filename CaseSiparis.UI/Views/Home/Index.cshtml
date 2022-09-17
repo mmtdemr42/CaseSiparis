@@ -1,14 +1,93 @@
-﻿@model IEnumerable<CaseSiparis.DataEntity.Product>
+﻿@model CaseSiparis.DataEntity.Product
 @{
     ViewData["Title"] = "Home Page";
 }
+@{ int desk = 1;}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-@foreach (var item in Model)
+<h3 class="text-success">Sipariş Ver</h3>
+@using (Html.BeginForm("AddOrder", "Home", FormMethod.Post))
 {
-    @item.ProductName
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col">
+            @Html.Label("Tarih")
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="col">
+            @Html.Label("Firma")
+            @Html.DropDownListFor(h => h.CompanyId, (List<SelectListItem>)ViewBag.valueCompany, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col">
+            @Html.Label("Ürün Adı")
+            @Html.TextBoxFor(c => c.ProductName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(a => a.ProductName)
+        </div>
+
+        <div class="col">
+            @Html.Label("Ürün Adedi")
+            @Html.TextBoxFor(c => c.ProductCount, new { @class = "form-control" })
+            @Html.ValidationMessageFor(a => a.ProductCount)
+        </div>
+        <div class="col">
+            @Html.Label("Tutar")
+            <div class="input-group mb-3">
+                <span class="input-group-text">₺</span>
+                @Html.TextBoxFor(c => c.ProductAmount, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.ProductAmount)
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-2">
+        <button class="btn btn-lg btn-success">Sipariş Ver</button>
+    </div>
 }
+
+
+<h3 class="text-success">Siparişlerim</h3>
+
+<table class="table table-bordered table-striped table-hover mt-2">
+    <thead class="table-success">
+        <tr class="text-center">
+            <th>Sıra</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Adedi</th>
+            <th>Tutar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in ViewBag.products)
+        {
+            <tr class="text-center">
+                <th>
+                    @desk
+                    @{ desk++;}
+                </th>
+                <td>
+                    @product.ProductName
+                </td>
+                <td>
+                    @product.ProductCount
+                </td>
+                <td>
+                    @product.ProductAmount ₺
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+

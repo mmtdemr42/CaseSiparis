@@ -1,20 +1,18 @@
-﻿using System;
+﻿using CaseSiparis.DataEntity;
+using CaseSiparis.DataEntity.Concrete;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace CaseSiparis.DataEntity
+namespace CaseSiparis.UI.Models
 {
-    public class Product
+    public class OrderProduct
     {
-        [Key]
-        public int ProductId { get; set; }
-        [StringLength(20)]
         public string ProductName { get; set; }
         public int ProductCount { get; set; }
         public decimal ProductAmount { get; set; }
         public int CompanyId { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }
